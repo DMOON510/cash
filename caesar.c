@@ -41,6 +41,9 @@ int main(int argc, string argv[])
            {
                printf("%c", (((s[j]+k)-97)%26)+97);
            }
+           else
+               printf("%c", s[j]);
+                
        }
            printf("\n");
            return 0;

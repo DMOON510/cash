@@ -18,8 +18,7 @@ int main(int argc, string argv[])
     int l = strlen(argv[1]);
     //should loop through the strings
     //i stands for the individual characters
-    int i;
-    for (i = 0; i < l; ++i)
+    for (int i = 0; i < l; ++i)
     {
         //should loop through each character in argv[1]; if any of the characters are NOT digits, then it will not accept and will return back to the beginning
         if (argv[1][i] < 48 || argv[1][i] > 57)
@@ -31,16 +30,20 @@ int main(int argc, string argv[])
        {
        string s = get_string("plaintext: ");
        printf("ciphertext: ");
+       //loop through each character of the user's input string
        for (int j = 0, p = strlen(s); j<p; j++)
        {
+           //for each upper case letter
            if (isupper(s[j]))
            {
                printf("%c", (((s[j]+k)-65)%26)+65);
            }
+           //for each lower case letter
            if (islower(s[j]))
            {
                printf("%c", (((s[j]+k)-97)%26)+97);
            }
+           //if its not a letter, just print the original 
            else
                printf("%c", s[j]);
                 

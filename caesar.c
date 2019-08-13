@@ -36,11 +36,13 @@ int main(int argc, string argv[])
            //for each upper case letter
            if (isupper(s[j]))
            {
+               //the number part makes sure it wraps aroudn properly
                printf("%c", (((s[j]+k)-65)%26)+65);
            }
            //for each lower case letter
            if (islower(s[j]))
            {
+               //wrap around
                printf("%c", (((s[j]+k)-97)%26)+97);
            }
            //if its not a letter, just print the original 

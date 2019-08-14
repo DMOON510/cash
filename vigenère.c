@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     }
     int k = atoi(argv[1]);
     int l = strlen(argv[1]);
-    //j itertes over the second argument
+    //a itertes over the second argument/keyword
     for (int j = 0; j < l; ++j)
     {
         if (argv[1][j] >= 48 && argv[1][j] <= 57)
@@ -29,21 +29,24 @@ int main(int argc, string argv[])
            //i iterates over the plaintext 
            for (int i = 0, z=strlen(p); i<z; i++)
            {
-               if (isupper(p[j]))
+               if (isupper(p[i]))
                {
-                   printf("%c", (p[j]+key));
+                   printf("%c", (p[i]+key));
                }
-               if (islower(p[j]))
+               if (islower(p[i]))
                {
-                   printf("%c", (p[j]+key));
+                   printf("%c", (p[i]+key));
                }
            }
+           printf("\n");
+           return 0;
        }
         printf("\n");
  }}
 
 int shift (char c)
 {
+    //if its an uppercase letter, 
     if (isupper(c))
     {
         return (c-65);
@@ -54,4 +57,3 @@ int shift (char c)
     }
     return 0;
 }
-

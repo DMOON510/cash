@@ -13,10 +13,10 @@ int main(int argc, string argv[])
     }
     int k = atoi(argv[1]);
     int l = strlen(argv[1]);
-    //a itertes over the second argument
-    for (int a = 0; a < l; ++a)
+    //j itertes over the second argument
+    for (int j = 0; j < l; ++j)
     {
-        if (argv[1][a] >= 48 && argv[1][a] <= 57)
+        if (argv[1][j] >= 48 && argv[1][j] <= 57)
         {
             printf("Usage: ./caesar key\n");
             return 1;

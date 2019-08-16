@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-//this is the prototype: take single character as input, output the shift value (integer) for that character
 int shift (char c);
 int main(int argc, string argv[])
  {
@@ -14,7 +13,7 @@ int main(int argc, string argv[])
     int k = atoi(argv[1]);
     int l = strlen(argv[1]);
     //a itertes over the second argument/keyword
-    for (int j = 0; j < l; ++j)
+    for (int j = 0; j < l; )
     {
         if (argv[1][j] >= 48 && argv[1][j] <= 57)
         {
@@ -31,11 +30,15 @@ int main(int argc, string argv[])
            {
                if (isupper(p[i]))
                {
-                   printf("%c", (p[i]+key));
+                   printf("%c", ((p[i]+key-65)%26+65));
                }
-               if (islower(p[i]))
+               else if (islower(p[i]))
                {
-                   printf("%c", (p[i]+key));
+                   printf("%c", ((p[i]+key-97)%26+97));
+               }
+               else 
+               {
+                   printf("%c", p[i]);
                }
            }
            printf("\n");

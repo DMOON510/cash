@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     int k = atoi(argv[1]);
     int l = strlen(argv[1]);
     //a itertes over the second argument/keyword
-    for (int j = 0; j < l; )
+    for (int j = 0; j < l; j++)
     {
         if (argv[1][j] >= 48 && argv[1][j] <= 57)
         {
